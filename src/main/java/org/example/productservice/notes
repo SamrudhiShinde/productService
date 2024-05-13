@@ -1,0 +1,19 @@
+Cmd+Shift+A = shortcut used to search for annotations
+@RestController : This informs Spring that it has REST API's internally.This annotation will
+basically register that particular class with Spring Dispatcher Servlet,so that whenever some request comes,
+you can call those methods as there are some endpoints being executed in the controller class.
+
+@GetMapping("/products/{productId}")
+public String getSingleProduct(@PathVariable("productId") Long productId)
+here the ("productId") is present in the path where the request is coming,read the variable
+from the path and put the value of productId in this Long productId
+
+@RequestMapping : This annotation is used to map requests to controller methods.This is used at
+class level to express shared mappings or at the method level to narrow down to specific endpoint mapping.
+
+What does a controller do?
+Get the parameters from the request and pass those to the service.And service will return back to the client.
+Ideally the service should be an interface,because today there coule be 1 way of implementing it
+but tomorrow there could be some other way of implementing.
+
+Controllers accept DTOs but services don't accept DTOs.
