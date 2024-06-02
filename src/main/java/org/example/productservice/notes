@@ -16,4 +16,16 @@ Get the parameters from the request and pass those to the service.And service wi
 Ideally the service should be an interface,because today there coule be 1 way of implementing it
 but tomorrow there could be some other way of implementing.
 
-Controllers accept DTOs but services don't accept DTOs.
+Services have similar methods as that of controller,the only difference is Controllers accept DTOs but services don't accept DTOs.
+
+Usually every controller is associated with a service.
+Service is an interface because today there could be one way of implementing which would be changed in the future.
+
+There is a package named stereotype where all these annotations are present(Component,Controller,Indexed,Repository,Service)
+The only purpose of annotation is that this a special class please create an object of it.
+
+RestTemplateBuilder comes with Spring Web and it allows us to call 3rd party API's.
+
+Jackson is a library in Java that allows us to convert json into java object and vice versa.
+
+Type Erasure : In Java,for generics at runtime the datatype of parameters gets erased.
